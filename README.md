@@ -1,4 +1,4 @@
-# mmw_radio_camera_calibration
+# mmw_radar_camera_calibration
 ## 摄像头毫米波雷达联合标定
 整体思路：通过棋盘格标定法得到摄像头的内外参矩阵，再通过毫米波雷达与摄像头之间的坐标系关系得到他们之间的外参矩阵。
 结合相机内参矩阵和毫米波雷达外参矩阵即可得到图片与毫米波雷达坐标转化关系。
@@ -8,7 +8,7 @@
 
 
 ##### 代码位置：
-https://github.com/reidddddddd/mmw_radio_camera_calibration/blob/main/Calibration/calibration.py里的calibration__camera方法，
+https://github.com/reidddddddd/mmw_radio_camera_calibration/blob/main/Calibration/calibration.py 里的calibration__camera方法，
 其中输入参数model=0校准4k相机，model=1校准1080p相机。
  
 ##### 输入位置：
@@ -26,7 +26,7 @@ https://github.com/reidddddddd/mmw_radio_camera_calibration/tree/main/Calibratio
 ### 毫米波雷达标定
 
 #### 方法1: 基于坐标系的转换
-代码位置：https://github.com/reidddddddd/mmw_radio_camera_calibration/blob/main/Calibration/calibration.py里的calibration_mmw_radar_camera方法  
+代码位置：https://github.com/reidddddddd/mmw_radio_camera_calibration/blob/main/Calibration/calibration.py 里的calibration_mmw_radar_camera方法  
 
 在这个方法里，我们假定相机和雷达之间的坐标系不存在旋转关系，仅存在平移关系。我们通过测量相机和雷达之间的位置关系得到其转换矩阵。
 毫米波外参矩阵.
